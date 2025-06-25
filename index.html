@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Abhirup Kumar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AICTE-VAANI Workshop | Adamas University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "custom-coral": "#E87A7A",
+              "custom-steel-blue": "#5B8291",
+              "custom-taupe": "#A99985",
+              "custom-light-bg": "#F5F3F0",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #f5f3f0 0%,
+          #e1e8eb 50%,
+          #d4e0e5 100%
+        );
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+      :root {
+        --steel-blue: #4682b4;
+        --coral-red: #fa8072;
+        --taupe: #b8a99a;
+        --light-taupe: #e0d9d0;
+        --dark-taupe: #a09588;
+        --white: #ffffff;
+        --dark: #333333;
+        --light-gray: #f5f5f5;
+        --glass-bg: rgba(255, 255, 255, 0.15);
+        --glass-border: rgba(255, 255, 255, 0.18);
+      }
+
+      /* Glass effect base */
+      .glass {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      .glass-strong {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      .glass-light {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+      }
+
+      .hero-bg {
+        background: linear-gradient(
+          135deg,
+          rgba(245, 243, 240, 0.8) 0%,
+          rgba(225, 232, 235, 0.8) 100%
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+
+      .section-title {
+        border-left: 4px solid #e87a7a;
+        padding-left: 1rem;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 15px 40px 0 rgba(31, 38, 135, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          rgba(232, 122, 122, 0.9),
+          rgba(217, 104, 104, 0.9)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        box-shadow: 0 8px 32px 0 rgba(232, 122, 122, 0.4);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(
+          135deg,
+          rgba(217, 104, 104, 1),
+          rgba(200, 90, 90, 1)
+        );
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px 0 rgba(232, 122, 122, 0.6);
+      }
+
+      /* Header glass effect */
+      header {
+        background: rgba(255, 255, 255, 0.25) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Mobile menu glass effect */
+      #mobile-menu {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Footer glass effect */
+      footer {
+        background: rgba(91, 130, 145, 0.95) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        color: white !important;
+      }
+
+      /* Section backgrounds */
+      .section-glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Registration card special glass effect */
+      .register-glass {
+        background: linear-gradient(
+          135deg,
+          rgba(91, 130, 145, 0.9),
+          rgba(81, 120, 135, 0.9)
+        );
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(91, 130, 145, 0.4);
+      }
+
+      /* Smooth animations */
+      * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Section scroll padding for proper heading visibility */
+      section {
+        scroll-margin-top: 120px;
+      }
+
+      /* Center grids that don't fill the whole line */
+      .center-grid {
+        justify-items: center;
+      }
+
+      /* Ensure all cards in grids have equal height */
+      .center-grid .card {
+        height: 100%;
+        min-height: 280px;
+      }
+
+      /* Enhanced register buttons for better visibility */
+      .register-btn-enhanced {
+        background: linear-gradient(45deg, #e87a7a, #d96868, #e87a7a);
+        background-size: 200% 200%;
+        animation: gradient-shift 3s ease infinite;
+        box-shadow: 0 8px 25px rgba(232, 122, 122, 0.5),
+          0 0 20px rgba(232, 122, 122, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .register-btn-enhanced:hover {
+        background: linear-gradient(45deg, #d96868, #c55555, #d96868);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 12px 35px rgba(232, 122, 122, 0.6),
+          0 0 30px rgba(232, 122, 122, 0.4);
+      }
+
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Special styling for ATAL portal button */
+      .atal-btn-enhanced {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 2px solid rgba(91, 130, 145, 0.3) !important;
+        box-shadow: 0 8px 25px rgba(91, 130, 145, 0.4),
+          0 0 20px rgba(255, 255, 255, 0.3);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .atal-btn-enhanced:hover {
+        background: rgba(255, 255, 255, 1) !important;
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 12px 35px rgba(91, 130, 145, 0.5),
+          0 0 30px rgba(255, 255, 255, 0.4);
+      }
+      .cta-button {
+        background: var(--taupe);
+        color: var(--dark);
+        padding: 16px 45px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+      }
+
+      .cta-button:hover::before {
+        transform: translateX(100%);
+      }
+
+      .cta-button:hover {
+        background: var(--coral-red);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+      #members-grid .card {
+        width: 240px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      #members-grid .card img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header -->
+    <header class="shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2 md:space-x-4">
+          <img
+            src="./Images/logo.png"
+            alt="Adamas University Logo and AICTE Logo"
+            class="h-16 md:h-20" />
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            >About</a
+          >
+          <a
+            href="#speakers"
+            class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            >Speakers</a
+          >
+          <a
+            href="#schedule"
+            class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            >Details</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            >Committee</a
+          >
+        </div>
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-gray-700 hover:text-custom-steel-blue focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden shadow-lg">
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="#about"
+            class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            >About</a
+          >
+          <a
+            href="#speakers"
+            class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            >Speakers</a
+          >
+          <a
+            href="#schedule"
+            class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            >Details</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            >Committee</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-bg py-12 md:py-20 px-4">
+        <div class="container mx-auto text-center">
+          <h1
+            class="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight px-2">
+            AICTE-VAANI Sponsored Three Days Workshop
+          </h1>
+          <p
+            class="text-lg md:text-xl lg:text-2xl text-custom-steel-blue font-semibold mb-6 px-2">
+            Building Inclusive Digital Solutions: AI, Ethics, and Beyond
+          </p>
+          <div
+            class="flex justify-center items-center space-x-4 text-gray-700 mb-6 md:mb-8">
+            <svg
+              class="w-5 h-5 md:w-6 md:h-6 text-custom-steel-blue"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span class="font-medium text-base md:text-lg"
+              >23-25 July, 2025</span
+            >
+          </div>
+          <p
+            class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 px-4 font-extrabold">
+            Organised by Department of Computer Science and Engineering, Adamas
+            University
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center gap-4">
+            <a
+              href="https://atalacademy.aicte-india.org/login"
+              target="_blank"
+              class="cta-button px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
+              style="height: 56px; width: 240px">
+              Register Now
+            </a>
+            <a
+              href="./AICTE-VAANI SPONSORED THREE DAYS WORKSHOP_English.pdf"
+              class="cta-button ml-0 md:ml-4 px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
+              style="height: 56px; width: 240px"
+              download>
+              <span class="inline-flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14" />
+                </svg>
+                Download Brochure
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-12 md:py-16 px-4 md:px-6">
+        <div class="container mx-auto">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue">
+            About the Event
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            <div class="glass-strong p-4 md:p-6 rounded-lg">
+              <h3
+                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800">
+                About the Workshop
+              </h3>
+              <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                In alignment with the vision of Viksit Bharat, this workshop
+                empowers educators to develop inclusive, secure, and ethical AI
+                solutions for India's diverse socio-linguistic landscape. It
+                focuses on multilingual AI systems like voice assistants and
+                chatbots, emphasizing cybersecurity, ethical deployment, and
+                accessibility for regional communities.
+              </p>
+            </div>
+            <div class="glass-strong p-4 md:p-6 rounded-lg">
+              <h3
+                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800">
+                About AICTE-VAANI
+              </h3>
+              <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                The AICTE-Vibrant Advocacy for Advancement and Nurturing of
+                Indian Languages (VAANI) scheme promotes Indian languages in
+                technical education to improve the teaching-learning process. It
+                aims to create a knowledge base in local languages and encourage
+                research and industry collaboration in regional languages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Objectives & Outcomes -->
+      <section class="section-glass py-12 md:py-16 px-4 md:px-6">
+        <div class="container mx-auto">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue">
+            Objectives & Expected Outcomes
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            <div class="glass-strong p-6 rounded-lg">
+              <h3
+                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe">
+                Key Objectives
+              </h3>
+              <ul
+                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base">
+                <li>
+                  Equip educators with skills in developing inclusive AI
+                  solutions.
+                </li>
+                <li>
+                  Design bias-free, secure AI tools for non-English users.
+                </li>
+                <li>
+                  Promote responsible AI usage in governance, healthcare, and
+                  agriculture.
+                </li>
+                <li>
+                  Build AI solutions that serve regional languages and
+                  communities.
+                </li>
+              </ul>
+            </div>
+            <div class="glass-strong p-6 rounded-lg">
+              <h3
+                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe">
+                Expected Outcomes
+              </h3>
+              <ul
+                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base">
+                <li>Ability to design secure, multilingual AI systems.</li>
+                <li>Skills to combat AI bias and enhance cybersecurity.</li>
+                <li>
+                  Capability for ethical AI implementation across critical
+                  sectors.
+                </li>
+                <li>
+                  Expertise in creating accessible, region-specific AI tools.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Speakers Section -->
+      <section id="speakers" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2
+            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue">
+            Resource Persons
+          </h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center"
+            id="speakers-grid">
+            <!-- Speaker cards are dynamically generated here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Registration & Schedule -->
+      <section id="schedule" class="bg-white py-16 px-6">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-12 text-custom-steel-blue">
+            Workshop Details & Registration
+          </h2>
+          <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+            <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
+              <h3 class="text-2xl font-bold mb-6 text-custom-taupe">
+                Key Information
+              </h3>
+              <div class="space-y-4 text-gray-700">
+                <p>
+                  <strong>Eligibility:</strong> Faculties, research fellows, PG
+                  students, and industry professionals.
+                </p>
+                <p>
+                  <strong>Selection:</strong> First come, first serve basis.
+                </p>
+                <p><strong>Seats:</strong> 50</p>
+                <p><strong>Timings:</strong> 9:00 AM to 5:30 PM</p>
+                <p>
+                  <strong>Fee:</strong>
+                  <span class="font-bold text-green-600">NIL</span> (Free of
+                  charge)
+                </p>
+                <p>
+                  <strong>Certificate:</strong> AICTE-VAANI E-Certificate for
+                  participants with >80% attendance.
+                </p>
+              </div>
+            </div>
+            <div
+              id="register"
+              class="bg-custom-steel-blue text-white p-8 rounded-lg shadow-lg flex flex-col justify-center items-center text-center">
+              <h3 class="text-3xl font-bold mb-4">Register Now!</h3>
+              <p class="mb-2">Last Date for Registration:</p>
+              <p class="text-2xl font-bold mb-6">22 July 2025</p>
+              <a
+                href="https://atalacademy.aicte-india.org/login"
+                target="_blank"
+                class="bg-white text-custom-steel-blue font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300"
+                >Register on ATAL Portal</a
+              >
+              <p class="mt-4 text-sm text-gray-200">
+                Application ID: 2102121822
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organizing Committee -->
+      <section id="contact" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2
+            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue">
+            Organizing Committee
+          </h2>
+          <div class="text-center max-w-6xl mx-auto">
+            <!-- Patrons -->
+            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+              Patrons
+            </h3>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
+              id="patrons-grid">
+              <!-- Patrons dynamically generated here -->
+            </div>
+
+            <!-- Coordinators -->
+            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+              Coordinators
+            </h3>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
+              id="coordinators-grid">
+              <!-- Coordinators dynamically generated here -->
+            </div>
+
+            <!-- Members -->
+            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+              Committee Members
+            </h3>
+            <div
+              class="flex flex-wrap justify-center gap-8"
+              id="members-grid"
+              style="gap: 2rem">
+              <!-- Members dynamically generated here -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-10 px-4 glass-strong text-white">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Venue -->
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">Venue</h3>
+          <p class="text-sm leading-relaxed text-gray-100">
+            Department of Computer Science and Engineering<br />
+            Adamas University<br />
+            Adamas Knowledge City<br />
+            Barasat - Barrackpore Road<br />
+            Jagannathpur, Kolkata<br />
+            West Bengal 700126
+          </p>
+        </div>
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">Contact Information</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2">
+              <!-- User SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" stroke-width="2" />
+                <path stroke-width="2" d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+              </svg>
+              <div class="text-gray-100">
+                Prof. (Dr) Sajal Saha | Coordinator
+              </div>
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- Phone SVG -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-gray-200"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor">
+                <!-- Icon from Material Symbols by Google -->
+                <path
+                  fill="none"
+                  d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3M6.025 9l1.65-1.65L7.25 5H5.025q.125 1.025.35 2.025T6.025 9m8.95 8.95q.975.425 1.988.675T19 18.95v-2.2l-2.35-.475zm0 0" />
+              </svg>
+              <span class="text-gray-100">+91 9477240461</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- Email SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-width="2" d="M4 4h16v16H4z" />
+                <path stroke-width="2" d="M22 6l-10 7L2 6" />
+              </svg>
+              <span class="text-gray-100"
+                >sajal1.saha@adamasuniversity.ac.in</span
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- Clock SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                <path stroke-width="2" d="M12 6v6l4 2" />
+              </svg>
+              <span class="text-gray-100"
+                >Workshop Hours: 9:00 AM - 5:30 PM</span
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <!-- Globe SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                <path
+                  stroke-width="2"
+                  d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+              </svg>
+              <span class="text-gray-100">
+                Workshop Website:
+                <a
+                  href="https://www.aucse.in/"
+                  class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
+                  >aucse.in</a
+                >
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- External Link SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-width="2" d="M14 3h7v7m0-7L10 14" />
+                <rect
+                  width="18"
+                  height="18"
+                  x="3"
+                  y="3"
+                  rx="2"
+                  stroke-width="2" />
+              </svg>
+              <span class="text-gray-100">
+                Registration Portal:
+                <a
+                  href="https://atalacademy.aicte-india.org/login"
+                  class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
+                  >atalacademy.aicte-india.org</a
+                >
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- University SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-width="2" d="M12 3l9 4.5-9 4.5-9-4.5z" />
+                <path stroke-width="2" d="M3 17.25V21h18v-3.75" />
+                <path stroke-width="2" d="M3 9.75V12l9 4.5 9-4.5V9.75" />
+              </svg>
+              <span class="text-gray-100">Adamas University</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <!-- PDF SVG -->
+              <svg
+                class="w-5 h-5 text-gray-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <rect
+                  width="16"
+                  height="20"
+                  x="4"
+                  y="2"
+                  rx="2"
+                  stroke-width="2" />
+                <path stroke-width="2" d="M8 6h8M8 10h8M8 14h4" />
+              </svg>
+              <a
+                href="./AICTE-VAANI SPONSORED THREE DAYS WORKSHOP_English.pdf"
+                class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
+                download
+                >Download Brochure</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="container mx-auto mt-8 border-t border-white/20 pt-4 text-center text-xs text-gray-200">
+        &copy; 2025 AICTE-VAANI Workshop. Organized by Department of Computer
+        Science and Engineering, Adamas University.<br />
+        All Rights Reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Data for people
+      const speakers = [
+        {
+          name: "Dr. Radha Tamal Goswami",
+          title: "Professor - Adamas University",
+          image: "./Images/RadhaTamalGoswami.jpeg",
+        },
+        {
+          name: "Dr. Amlan Chakrabarti",
+          title: "Professor - Calcutta University",
+          image: "./Images/Amlan Chakrabarti.png",
+        },
+        {
+          name: "Mr. Rajat Subhro Roy",
+          title: "Director - Adamas Tech",
+          image: "./Images/RajatSubhroRoy.jpeg",
+        },
+        {
+          name: "Mr. Shamik Misra",
+          title: "Senior Escalation Engineer - Microsoft",
+          image: "Images/ShamikMisra.jpeg",
+        },
+        {
+          name: "Mrs. Sampa Misra",
+          title: "Senior Engineering Manager - IBM",
+          image: "Images/SampaMisra.jpeg",
+        },
+        {
+          name: "Dr. Nilanjan Dey",
+          title: "Associate Professor - Techno Int. Newtown",
+          image: "./Images/Nilanjan.jpg",
+        },
+        {
+          name: "Dr. Surojit Bose",
+          title: "Associate Professor - Kusum Devi Dental Hospital",
+          image: "./Images/SurojitBose.png",
+        },
+        {
+          name: "Dr. Debanjan Sadhya",
+          title: "Assistant Professor - ABVIIITM Gwalior",
+          image: "./Images/Debanjan.jpg",
+        },
+        {
+          name: "Dr. Swalpa Kumar Roy",
+          title: "Assistant Professor - AGEC",
+          image: "./Images/SwalpaKumarRoy.jpeg",
+        },
+        {
+          name: "Dr. Saptarshi Goswami",
+          title: "Assistant Professor - Banga Bashi College",
+          image: "./Images/SaptarshiGoswami.png",
+        },
+      ];
+
+      const patrons = [
+        {
+          name: "Prof. (Dr.) Samit Ray",
+          title: "Honorable Chancellor, Adamas University",
+          image: "./Images/SamitRay.jpeg",
+        },
+        {
+          name: "Prof. (Dr) Suranjan Das",
+          title: "Honorable Vice Chancellor, Adamas University",
+          image: "./Images/suranjanDas.jpg",
+        },
+      ];
+
+      const coordinators = [
+        {
+          name: "Prof. (Dr) Sajal Saha",
+          title: "Coordinator | Associate Dean & HOD (CSE)",
+          image: "./Images/SajalSaha.jpg",
+        },
+        {
+          name: "Dr. Bodhi Chakraborty",
+          title: "Co-Coordinator | Assistant Professor",
+          image:
+            "https://media.licdn.com/dms/image/v2/D4D03AQEIiGeuOuj8Mw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708746163751?e=1756339200&v=beta&t=TIkuZl4ikFrPQWX5dV8OYZSMkNWioZyP3t1_nHgZg_o",
+        },
+      ];
+
+      const members = [
+        {
+          name: "Prof. (Dr) Debdutta Pal",
+          title: "Professor",
+          image: "/Images/DebduttaPal.jpg",
+        },
+        {
+          name: "Mr. Prabhat Das",
+          title: "Assistant Professor",
+          image: "./Images/PrabhatDas.jpeg",
+        },
+        {
+          name: "Dr. Jhilam Mukherjee",
+          title: "Assistant Professor",
+          image:
+            "https://media.licdn.com/dms/image/v2/C4E03AQH7IeyyXrj7PQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1592056208031?e=1756339200&v=beta&t=uVstIfDS54berC1ZMYn7pyCF0d4VzxzWF3bfrGWBYH4",
+        },
+        {
+          name: "Mr. Victor Das",
+          title: "Assistant Professor",
+          image: "./Images/VictorDas.JPG",
+        },
+        {
+          name: "Mr. Shiplu Das",
+          title: "Assistant Professor",
+          image: "./Images/ShipluDas.jpeg",
+        },
+        {
+          name: "Mrs. Rupanwita Das Mahapatra",
+          title: "Assistant Professor",
+          image:
+            "https://media.licdn.com/dms/image/v2/C5603AQHAooAmGPqUYw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650526929717?e=1756339200&v=beta&t=4QTqc_7xLR1sfHWw7ltNE2RRiLHZnnHP76XUM9OitjA",
+        },
+        {
+          name: "Mr. Bishal Mondal",
+          title: "Technical Assistant",
+          image: "./Images/BishalMondal.jpg",
+        },
+      ];
+
+      // Function to create a person card
+      function createPersonCard(person) {
+        const imageUrl =
+          person.image || "https://placehold.co/100x100/e1e8eb/5B8291?text=👤";
+
+        return `
+                <div class="card p-3 md:p-4 rounded-lg flex flex-col items-center">
+                    <img src="${imageUrl}" class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full mx-auto mb-3 md:mb-4 object-cover" alt="Photo of ${person.name}">
+                    <h4 class="font-bold text-sm md:text-md lg:text-lg text-gray-800 text-center leading-tight">${person.name}</h4>
+                    <p class="text-gray-600 text-xs md:text-sm text-center mt-1">${person.title}</p>
+                </div>
+            `;
+      }
+
+      // Populate the grids
+      document.getElementById("speakers-grid").innerHTML = speakers
+        .map(createPersonCard)
+        .join("");
+      document.getElementById("patrons-grid").innerHTML = patrons
+        .map(createPersonCard)
+        .join("");
+      document.getElementById("coordinators-grid").innerHTML = coordinators
+        .map(createPersonCard)
+        .join("");
+      document.getElementById("members-grid").innerHTML = members
+        .map(createPersonCard)
+        .join("");
+
+      // Mobile menu functionality
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
