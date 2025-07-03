@@ -310,49 +310,58 @@
     <!-- Header -->
     <header class="shadow-md sticky top-0 z-50">
       <nav
-        class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+        class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center"
+      >
         <div class="flex items-center space-x-2 md:space-x-4">
           <img
             src="./Images/logo.png"
             alt="Adamas University Logo and AICTE Logo"
-            class="h-16 md:h-20" />
+            class="h-16 md:h-20"
+          />
         </div>
         <div class="hidden md:flex space-x-8">
           <a
             href="#about"
             class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            data-translate="about"
             >About</a
           >
           <a
             href="#speakers"
             class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            data-translate="speakers"
             >Speakers</a
           >
           <a
             href="#schedule"
             class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            data-translate="details"
             >Details</a
           >
           <a
             href="#contact"
             class="text-gray-700 hover:text-custom-steel-blue transition duration-300 font-medium"
+            data-translate="committee"
             >Committee</a
           >
         </div>
         <!-- Mobile menu button -->
         <button
           id="mobile-menu-btn"
-          class="md:hidden text-gray-700 hover:text-custom-steel-blue focus:outline-none">
+          class="md:hidden text-gray-700 hover:text-custom-steel-blue focus:outline-none"
+        >
           <svg
             class="w-6 h-6"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
           </svg>
         </button>
       </nav>
@@ -362,21 +371,25 @@
           <a
             href="#about"
             class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            data-translate="about"
             >About</a
           >
           <a
             href="#speakers"
             class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            data-translate="speakers"
             >Speakers</a
           >
           <a
             href="#schedule"
             class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            data-translate="details"
             >Details</a
           >
           <a
             href="#contact"
             class="block text-gray-700 hover:text-custom-steel-blue py-2 font-medium"
+            data-translate="committee"
             >Committee</a
           >
         </div>
@@ -388,63 +401,80 @@
       <section class="hero-bg py-12 md:py-20 px-4">
         <div class="container mx-auto text-center">
           <h1
-            class="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight px-2">
+            class="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight px-2"
+            data-translate="workshop_title"
+          >
             AICTE-VAANI Sponsored Three Days Workshop
           </h1>
           <p
-            class="text-lg md:text-xl lg:text-2xl text-custom-steel-blue font-semibold mb-6 px-2">
+            class="text-lg md:text-xl lg:text-2xl text-custom-steel-blue font-semibold mb-6 px-2"
+            data-translate="workshop_subtitle"
+          >
             Building Inclusive Digital Solutions: AI, Ethics, and Beyond
           </p>
           <div
-            class="flex justify-center items-center space-x-4 text-gray-700 mb-6 md:mb-8">
+            class="flex justify-center items-center space-x-4 text-gray-700 mb-6 md:mb-8"
+          >
             <svg
               class="w-5 h-5 md:w-6 md:h-6 text-custom-steel-blue"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
             </svg>
-            <span class="font-medium text-base md:text-lg"
+            <span
+              class="font-medium text-base md:text-lg"
+              data-translate="workshop_date"
               >23-25 July, 2025</span
             >
           </div>
           <p
-            class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 px-4 font-extrabold">
+            class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 px-4 font-extrabold"
+            data-translate="workshop_organizer"
+          >
             Organised by Department of Computer Science and Engineering, Adamas
             University
           </p>
           <div
-            class="flex flex-col md:flex-row justify-center items-center gap-4">
+            class="flex flex-col md:flex-row justify-center items-center gap-4"
+          >
             <a
               href="https://atalacademy.aicte-india.org/login"
               target="_blank"
               class="cta-button px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
-              style="height: 56px; width: 240px">
+              style="height: 56px; width: 240px"
+              data-translate="register_now"
+            >
               Register Now
             </a>
             <a
               href="./AICTE-VAANI SPONSORED THREE DAYS WORKSHOP_English.pdf"
               class="cta-button ml-0 md:ml-4 px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
-              style="height: 56px; width: 240px"
-              download>
+              style="height: 56px; width: 250px"
+              download
+            >
               <span class="inline-flex items-center">
                 <svg
                   class="w-5 h-5 mr-2"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
-                  viewBox="0 0 24 24">
+                  viewBox="0 0 24 24"
+                >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14" />
+                    d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"
+                  />
                 </svg>
-                Download Brochure
+                <span data-translate="download_brochure">Download Brochure</span>
               </span>
             </a>
           </div>
@@ -455,16 +485,23 @@
       <section id="about" class="py-12 md:py-16 px-4 md:px-6">
         <div class="container mx-auto">
           <h2
-            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue">
+            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue"
+            data-translate="about_event"
+          >
             About the Event
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <div class="glass-strong p-4 md:p-6 rounded-lg">
               <h3
-                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800">
+                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800"
+                data-translate="about_workshop"
+              >
                 About the Workshop
               </h3>
-              <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+              <p
+                class="text-gray-700 leading-relaxed text-sm md:text-base"
+                data-translate="workshop_description"
+              >
                 In alignment with the vision of Viksit Bharat, this workshop
                 empowers educators to develop inclusive, secure, and ethical AI
                 solutions for India's diverse socio-linguistic landscape. It
@@ -475,10 +512,15 @@
             </div>
             <div class="glass-strong p-4 md:p-6 rounded-lg">
               <h3
-                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800">
+                class="text-xl md:text-2xl font-bold mb-4 section-title text-gray-800"
+                data-translate="about_vaani"
+              >
                 About AICTE-VAANI
               </h3>
-              <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+              <p
+                class="text-gray-700 leading-relaxed text-sm md:text-base"
+                data-translate="vaani_description"
+              >
                 The AICTE-Vibrant Advocacy for Advancement and Nurturing of
                 Indian Languages (VAANI) scheme promotes Indian languages in
                 technical education to improve the teaching-learning process. It
@@ -494,29 +536,34 @@
       <section class="section-glass py-12 md:py-16 px-4 md:px-6">
         <div class="container mx-auto">
           <h2
-            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue">
+            class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-custom-steel-blue"
+            data-translate="objectives_outcomes"
+          >
             Objectives & Expected Outcomes
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <div class="glass-strong p-6 rounded-lg">
               <h3
-                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe">
+                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe"
+                data-translate="key_objectives"
+              >
                 Key Objectives
               </h3>
               <ul
-                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base">
-                <li>
+                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base"
+              >
+                <li data-translate="objective1">
                   Equip educators with skills in developing inclusive AI
                   solutions.
                 </li>
-                <li>
+                <li data-translate="objective2">
                   Design bias-free, secure AI tools for non-English users.
                 </li>
-                <li>
+                <li data-translate="objective3">
                   Promote responsible AI usage in governance, healthcare, and
                   agriculture.
                 </li>
-                <li>
+                <li data-translate="objective4">
                   Build AI solutions that serve regional languages and
                   communities.
                 </li>
@@ -524,18 +571,25 @@
             </div>
             <div class="glass-strong p-6 rounded-lg">
               <h3
-                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe">
+                class="text-xl md:text-2xl font-semibold mb-4 text-custom-taupe"
+                data-translate="expected_outcomes"
+              >
                 Expected Outcomes
               </h3>
               <ul
-                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base">
-                <li>Ability to design secure, multilingual AI systems.</li>
-                <li>Skills to combat AI bias and enhance cybersecurity.</li>
-                <li>
+                class="space-y-3 text-gray-700 list-disc list-inside text-sm md:text-base"
+              >
+                <li data-translate="outcome1">
+                  Ability to design secure, multilingual AI systems.
+                </li>
+                <li data-translate="outcome2">
+                  Skills to combat AI bias and enhance cybersecurity.
+                </li>
+                <li data-translate="outcome3">
                   Capability for ethical AI implementation across critical
                   sectors.
                 </li>
-                <li>
+                <li data-translate="outcome4">
                   Expertise in creating accessible, region-specific AI tools.
                 </li>
               </ul>
@@ -548,12 +602,15 @@
       <section id="speakers" class="py-16 px-6">
         <div class="container mx-auto">
           <h2
-            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue">
+            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue"
+            data-translate="resource_persons"
+          >
             Resource Persons
           </h2>
           <div
             class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center"
-            id="speakers-grid">
+            id="speakers-grid"
+          >
             <!-- Speaker cards are dynamically generated here -->
           </div>
         </div>
@@ -562,45 +619,64 @@
       <!-- Registration & Schedule -->
       <section id="schedule" class="bg-white py-16 px-6">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-12 text-custom-steel-blue">
+          <h2
+            class="text-3xl font-bold mb-12 text-custom-steel-blue"
+            data-translate="workshop_details_registration"
+          >
             Workshop Details & Registration
           </h2>
           <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
             <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
-              <h3 class="text-2xl font-bold mb-6 text-custom-taupe">
+              <h3
+                class="text-2xl font-bold mb-6 text-custom-taupe"
+                data-translate="key_information"
+              >
                 Key Information
               </h3>
               <div class="space-y-4 text-gray-700">
                 <p>
-                  <strong>Eligibility:</strong> Faculties, research fellows, PG
-                  students, and industry professionals.
+                  <strong data-translate="eligibility">Eligibility:</strong> <span data-translate="eligibility_text">Faculties, research fellows, PG students, and industry professionals.</span>
                 </p>
                 <p>
-                  <strong>Selection:</strong> First come, first serve basis.
+                  <strong data-translate="selection">Selection:</strong> <span data-translate="selection_text">First come, first serve basis.</span>
                 </p>
-                <p><strong>Seats:</strong> 50</p>
-                <p><strong>Timings:</strong> 9:00 AM to 5:30 PM</p>
+                <p><strong data-translate="seats">Seats:</strong> 50</p>
                 <p>
-                  <strong>Fee:</strong>
-                  <span class="font-bold text-green-600">NIL</span> (Free of
-                  charge)
+                  <strong data-translate="timings">Timings:</strong> <span data-translate="timings_text">9:00 AM to 5:30 PM</span>
                 </p>
                 <p>
-                  <strong>Certificate:</strong> AICTE-VAANI E-Certificate for
-                  participants with >80% attendance.
+                  <strong data-translate="fee">Fee:</strong>
+                  <span class="font-bold text-green-600" data-translate="fee_text">NIL</span> <span data-translate="fee_free">(Free of charge)</span>
+                </p>
+                <p>
+                  <strong data-translate="certificate">Certificate:</strong> <span data-translate="certificate_text">AICTE-VAANI E-Certificate for participants with >80% attendance.</span>
                 </p>
               </div>
             </div>
             <div
               id="register"
-              class="bg-custom-steel-blue text-white p-8 rounded-lg shadow-lg flex flex-col justify-center items-center text-center">
-              <h3 class="text-3xl font-bold mb-4">Register Now!</h3>
-              <p class="mb-2">Last Date for Registration:</p>
-              <p class="text-2xl font-bold mb-6">22 July 2025</p>
+              class="bg-custom-steel-blue text-white p-8 rounded-lg shadow-lg flex flex-col justify-center items-center text-center"
+            >
+              <h3
+                class="text-3xl font-bold mb-4"
+                data-translate="register_now_cta"
+              >
+                Register Now!
+              </h3>
+              <p class="mb-2" data-translate="last_date_registration">
+                Last Date for Registration:
+              </p>
+              <p
+                class="text-2xl font-bold mb-6"
+                data-translate="registration_date"
+              >
+                22 July 2025
+              </p>
               <a
                 href="https://atalacademy.aicte-india.org/login"
                 target="_blank"
                 class="bg-white text-custom-steel-blue font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300"
+                data-translate="register_atal"
                 >Register on ATAL Portal</a
               >
               <p class="mt-4 text-sm text-gray-200">
@@ -615,38 +691,52 @@
       <section id="contact" class="py-16 px-6">
         <div class="container mx-auto">
           <h2
-            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue">
+            class="text-3xl font-bold text-center mb-12 text-custom-steel-blue"
+            data-translate="organizing_committee"
+          >
             Organizing Committee
           </h2>
           <div class="text-center max-w-6xl mx-auto">
             <!-- Patrons -->
-            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+            <h3
+              class="text-2xl font-semibold mb-8 text-custom-taupe"
+              data-translate="patrons"
+            >
               Patrons
             </h3>
             <div
               class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
-              id="patrons-grid">
+              id="patrons-grid"
+            >
               <!-- Patrons dynamically generated here -->
             </div>
 
             <!-- Coordinators -->
-            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+            <h3
+              class="text-2xl font-semibold mb-8 text-custom-taupe"
+              data-translate="coordinators"
+            >
               Coordinators
             </h3>
             <div
               class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
-              id="coordinators-grid">
+              id="coordinators-grid"
+            >
               <!-- Coordinators dynamically generated here -->
             </div>
 
             <!-- Members -->
-            <h3 class="text-2xl font-semibold mb-8 text-custom-taupe">
+            <h3
+              class="text-2xl font-semibold mb-8 text-custom-taupe"
+              data-translate="committee_members"
+            >
               Committee Members
             </h3>
             <div
               class="flex flex-wrap justify-center gap-8"
               id="members-grid"
-              style="gap: 2rem">
+              style="gap: 2rem"
+            >
               <!-- Members dynamically generated here -->
             </div>
           </div>
@@ -659,8 +749,16 @@
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Venue -->
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">Venue</h3>
-          <p class="text-sm leading-relaxed text-gray-100">
+          <h3
+            class="text-lg font-bold mb-3 text-white"
+            data-translate="venue"
+          >
+            Venue
+          </h3>
+          <p
+            class="text-sm leading-relaxed text-gray-100"
+            data-translate="venue_address"
+          >
             Department of Computer Science and Engineering<br />
             Adamas University<br />
             Adamas Knowledge City<br />
@@ -671,7 +769,12 @@
         </div>
         <!-- Contact Information -->
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">Contact Information</h3>
+          <h3
+            class="text-lg font-bold mb-3 text-white"
+            data-translate="contact_information"
+          >
+            Contact Information
+          </h3>
           <ul class="space-y-2 text-sm">
             <li class="flex items-start gap-2">
               <!-- User SVG -->
@@ -679,11 +782,12 @@
                 class="w-5 h-5 text-gray-200 mt-0.5"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <circle cx="12" cy="8" r="4" stroke-width="2" />
                 <path stroke-width="2" d="M4 20c0-4 4-6 8-6s8 2 8 6" />
               </svg>
-              <div class="text-gray-100">
+              <div class="text-gray-100" data-translate="coordinator_contact">
                 Prof. (Dr) Sajal Saha | Coordinator
               </div>
             </li>
@@ -694,11 +798,13 @@
                 class="w-5 h-5 text-gray-200"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor">
+                stroke="currentColor"
+              >
                 <!-- Icon from Material Symbols by Google -->
                 <path
                   fill="none"
-                  d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3M6.025 9l1.65-1.65L7.25 5H5.025q.125 1.025.35 2.025T6.025 9m8.95 8.95q.975.425 1.988.675T19 18.95v-2.2l-2.35-.475zm0 0" />
+                  d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3M6.025 9l1.65-1.65L7.25 5H5.025q.125 1.025.35 2.025T6.025 9m8.95 8.95q.975.425 1.988.675T19 18.95v-2.2l-2.35-.475zm0 0"
+                />
               </svg>
               <span class="text-gray-100">+91 9477240461</span>
             </li>
@@ -708,7 +814,8 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <path stroke-width="2" d="M4 4h16v16H4z" />
                 <path stroke-width="2" d="M22 6l-10 7L2 6" />
               </svg>
@@ -722,11 +829,12 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <circle cx="12" cy="12" r="10" stroke-width="2" />
                 <path stroke-width="2" d="M12 6v6l4 2" />
               </svg>
-              <span class="text-gray-100"
+              <span class="text-gray-100" data-translate="workshop_hours"
                 >Workshop Hours: 9:00 AM - 5:30 PM</span
               >
             </li>
@@ -734,7 +842,12 @@
         </div>
         <!-- Quick Links -->
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">Quick Links</h3>
+          <h3
+            class="text-lg font-bold mb-3 text-white"
+            data-translate="quick_links"
+          >
+            Quick Links
+          </h3>
           <ul class="space-y-2 text-sm">
             <li class="flex items-center gap-2">
               <!-- Globe SVG -->
@@ -742,14 +855,18 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <circle cx="12" cy="12" r="10" stroke-width="2" />
                 <path
                   stroke-width="2"
-                  d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+                  d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"
+                />
               </svg>
               <span class="text-gray-100">
-                Workshop Website:
+                <span data-translate="workshop_website"
+                  >Workshop Website:</span
+                >
                 <a
                   href="https://www.aucse.in/"
                   class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
@@ -763,7 +880,8 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <path stroke-width="2" d="M14 3h7v7m0-7L10 14" />
                 <rect
                   width="18"
@@ -771,10 +889,13 @@
                   x="3"
                   y="3"
                   rx="2"
-                  stroke-width="2" />
+                  stroke-width="2"
+                />
               </svg>
               <span class="text-gray-100">
-                Registration Portal:
+                <span data-translate="registration_portal"
+                  >Registration Portal:</span
+                >
                 <a
                   href="https://atalacademy.aicte-india.org/login"
                   class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
@@ -788,12 +909,15 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <path stroke-width="2" d="M12 3l9 4.5-9 4.5-9-4.5z" />
                 <path stroke-width="2" d="M3 17.25V21h18v-3.75" />
                 <path stroke-width="2" d="M3 9.75V12l9 4.5 9-4.5V9.75" />
               </svg>
-              <span class="text-gray-100">Adamas University</span>
+              <span class="text-gray-100" data-translate="adamas_university"
+                >Adamas University</span
+              >
             </li>
             <li class="flex items-center gap-2">
               <!-- PDF SVG -->
@@ -801,20 +925,23 @@
                 class="w-5 h-5 text-gray-200"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <rect
                   width="16"
                   height="20"
                   x="4"
                   y="2"
                   rx="2"
-                  stroke-width="2" />
+                  stroke-width="2"
+                />
                 <path stroke-width="2" d="M8 6h8M8 10h8M8 14h4" />
               </svg>
               <a
                 href="./AICTE-VAANI SPONSORED THREE DAYS WORKSHOP_English.pdf"
                 class="text-gray-200 font-semibold hover:text-white hover:underline transition-colors"
                 download
+                data-translate="download_brochure_footer"
                 >Download Brochure</a
               >
             </li>
@@ -822,12 +949,24 @@
         </div>
       </div>
       <div
-        class="container mx-auto mt-8 border-t border-white/20 pt-4 text-center text-xs text-gray-200">
+        class="container mx-auto mt-8 border-t border-white/20 pt-4 text-center text-xs text-gray-200"
+        data-translate="footer_copy"
+      >
         &copy; 2025 AICTE-VAANI Workshop. Organized by Department of Computer
         Science and Engineering, Adamas University.<br />
         All Rights Reserved.
       </div>
     </footer>
+
+    <!-- Language Switcher -->
+    <div id="language-switcher" class="fixed bottom-5 right-5 z-50">
+      <button
+        id="language-toggle-btn"
+        class="bg-custom-steel-blue text-white px-4 py-2 rounded-full shadow-lg hover:bg-custom-taupe transition-colors duration-300"
+      >
+        বাংলা
+      </button>
+    </div>
 
     <script>
       // Data for people
@@ -914,7 +1053,7 @@
         {
           name: "Prof. (Dr) Debdutta Pal",
           title: "Professor",
-          image: "/Images/DebduttaPal.jpg",
+          image: "./Images/DebduttaPal.jpg",
         },
         {
           name: "Mr. Prabhat Das",
@@ -1003,6 +1142,183 @@
             });
           }
         });
+      });
+
+      // Language switcher functionality
+      const languageToggleButton = document.getElementById(
+        "language-toggle-btn"
+      );
+      let currentLanguage = "en";
+
+      const translations = {
+        en: {
+          about: "About",
+          speakers: "Speakers",
+          details: "Details",
+          committee: "Committee",
+          workshop_title: "AICTE-VAANI Sponsored Three Days Workshop",
+          workshop_subtitle:
+            "Building Inclusive Digital Solutions: AI, Ethics, and Beyond",
+          workshop_date: "23-25 July, 2025",
+          workshop_organizer:
+            "Organised by Department of Computer Science and Engineering, Adamas University",
+          register_now: "Register Now",
+          download_brochure: "Download Brochure",
+          about_event: "About the Event",
+          about_workshop: "About the Workshop",
+          workshop_description:
+            "In alignment with the vision of Viksit Bharat, this workshop empowers educators to develop inclusive, secure, and ethical AI solutions for India's diverse socio-linguistic landscape. It focuses on multilingual AI systems like voice assistants and chatbots, emphasizing cybersecurity, ethical deployment, and accessibility for regional communities.",
+          about_vaani: "About AICTE-VAANI",
+          vaani_description:
+            "The AICTE-Vibrant Advocacy for Advancement and Nurturing of Indian Languages (VAANI) scheme promotes Indian languages in technical education to improve the teaching-learning process. It aims to create a knowledge base in local languages and encourage research and industry collaboration in regional languages.",
+          objectives_outcomes: "Objectives & Expected Outcomes",
+          key_objectives: "Key Objectives",
+          objective1:
+            "Equip educators with skills in developing inclusive AI solutions.",
+          objective2:
+            "Design bias-free, secure AI tools for non-English users.",
+          objective3:
+            "Promote responsible AI usage in governance, healthcare, and agriculture.",
+          objective4:
+            "Build AI solutions that serve regional languages and communities.",
+          expected_outcomes: "Expected Outcomes",
+          outcome1: "Ability to design secure, multilingual AI systems.",
+          outcome2: "Skills to combat AI bias and enhance cybersecurity.",
+          outcome3:
+            "Capability for ethical AI implementation across critical sectors.",
+          outcome4:
+            "Expertise in creating accessible, region-specific AI tools.",
+          resource_persons: "Resource Persons",
+          workshop_details_registration: "Workshop Details & Registration",
+          key_information: "Key Information",
+          eligibility: "Eligibility:",
+          eligibility_text: "Faculties, research fellows, PG students, and industry professionals.",
+          selection: "Selection:",
+          selection_text: "First come, first serve basis.",
+          seats: "Seats:",
+          timings: "Timings:",
+          timings_text: "9:00 AM to 5:30 PM",
+          fee: "Fee:",
+          fee_text: "NIL",
+          fee_free: "(Free of charge)",
+          certificate: "Certificate:",
+          certificate_text: "AICTE-VAANI E-Certificate for participants with >80% attendance.",
+          register_now_cta: "Register Now!",
+          last_date_registration: "Last Date for Registration:",
+          registration_date: "22 July 2025",
+          register_atal: "Register on ATAL Portal",
+          organizing_committee: "Organizing Committee",
+          patrons: "Patrons",
+          coordinators: "Coordinators",
+          committee_members: "Committee Members",
+          venue: "Venue",
+          venue_address:
+            "Department of Computer Science and Engineering<br />Adamas University<br />Adamas Knowledge City<br />Barasat - Barrackpore Road<br />Jagannathpur, Kolkata<br />West Bengal 700126",
+          contact_information: "Contact Information",
+          coordinator_contact: "Prof. (Dr) Sajal Saha | Coordinator",
+          workshop_hours: "Workshop Hours: 9:00 AM - 5:30 PM",
+          quick_links: "Quick Links",
+          workshop_website: "Workshop Website:",
+          registration_portal: "Registration Portal:",
+          adamas_university: "Adamas University",
+          download_brochure_footer: "Download Brochure",
+          footer_copy:
+            "&copy; 2025 AICTE-VAANI Workshop. Organized by Department of Computer Science and Engineering, Adamas University.<br />All Rights Reserved.",
+        },
+        bn: {
+          about: "সম্পর্কে",
+          speakers: "বক্তারা",
+          details: "বিস্তারিত",
+          committee: "কমিটি",
+          workshop_title: "AICTE-VAANI স্পনসর্ড তিন দিনের কর্মশালা",
+          workshop_subtitle:
+            "অন্তর্ভুক্তিমূলক ডিজিটাল সমাধান তৈরি: এআই, নীতিশাস্ত্র এবং এর বাইরে",
+          workshop_date: "২৩-২৫ জুলাই, ২০২৫",
+          workshop_organizer:
+            "আদামাস বিশ্ববিদ্যালয়, কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ দ্বারা আয়োজিত",
+          register_now: "এখন নিবন্ধন করুন",
+          download_brochure: "ব্রোশিওর ডাউনলোড করুন",
+          about_event: "ইভেন্ট সম্পর্কে",
+          about_workshop: "কর্মশালা সম্পর্কে",
+          workshop_description:
+            "বিকশিত ভারত-এর দৃষ্টিভঙ্গির সাথে সঙ্গতি রেখে, এই কর্মশালাটি ভারতের বৈচিত্র্যময় আর্থ-ভাষাগত প্রাকৃতিক দৃশ্যের জন্য অন্তর্ভুক্তিমূলক, সুরক্ষিত এবং নৈতিক এআই সমাধান বিকাশের জন্য শিক্ষাবিদদের ক্ষমতা প্রদান করে। এটি বহুভাষিক এআই সিস্টেম যেমন ভয়েস অ্যাসিস্ট্যান্ট এবং চ্যাটবটগুলির উপর দৃষ্টি নিবদ্ধ করে, সাইবার নিরাপত্তা, নৈতিক স্থাপনা এবং আঞ্চলিক সম্প্রদায়ের জন্য অ্যাক্সেসযোগ্যতার উপর জোর দেয়।",
+          about_vaani: "AICTE-VAANI সম্পর্কে",
+          vaani_description:
+            "AICTE-ভাইব্রেন্ট অ্যাডভোকেসি ফর অ্যাডভান্সমেন্ট অ্যান্ড নার্চারিং অফ ইন্ডিয়ান ল্যাঙ্গুয়েজেস (VAANI) স্কিমটি শিক্ষণ-শেখানো প্রক্রিয়া উন্নত করার জন্য প্রযুক্তিগত শিক্ষায় ভারতীয় ভাষাগুলিকে প্রচার করে। এর লক্ষ্য স্থানীয় ভাষায় একটি জ্ঞান ভিত্তি তৈরি করা এবং আঞ্চলিক ভাষায় গবেষণা ও শিল্প সহযোগিতাকে উৎসাহিত করা।",
+          objectives_outcomes: "উদ্দেশ্য ও প্রত্যাশিত ফলাফল",
+          key_objectives: "মূল উদ্দেশ্য",
+          objective1:
+            "অন্তর্ভুক্তিমূলক এআই সমাধান বিকাশে শিক্ষাবিদদের দক্ষতা দিয়ে সজ্জিত করা।",
+          objective2:
+            "অ-ইংরেজি ব্যবহারকারীদের জন্য পক্ষপাতহীন, সুরক্ষিত এআই সরঞ্জাম ডিজাইন করা।",
+          objective3:
+            "শাসন, স্বাস্থ্যসেবা এবং কৃষিতে দায়িত্বশীল এআই ব্যবহার প্রচার করা।",
+          objective4:
+            "আঞ্চলিক ভাষা এবং সম্প্রদায়ের সেবা করে এমন এআই সমাধান তৈরি করা।",
+          expected_outcomes: "প্রত্যাশিত ফলাফল",
+          outcome1: "সুরক্ষিত, বহুভাষিক এআই সিস্টেম ডিজাইন করার ক্ষমতা।",
+          outcome2: "এআই পক্ষপাতিত্ব মোকাবেলা এবং সাইবার নিরাপত্তা বাড়ানোর দক্ষতা।",
+          outcome3:
+            "গুরুত্বপূর্ণ খাত জুড়ে নৈতিক এআই বাস্তবায়নের ক্ষমতা।",
+          outcome4:
+            "অ্যাক্সেসযোগ্য, অঞ্চল-নির্দিষ্ট এআই সরঞ্জাম তৈরিতে দক্ষতা।",
+          resource_persons: "রিসোর্স পার্সন",
+          workshop_details_registration: "কর্মশালার বিবরণ এবং নিবন্ধন",
+          key_information: "মূল তথ্য",
+          eligibility: "যোগ্যতা:",
+          eligibility_text: "অনুষদ, গবেষণা ফেলো, পিজি ছাত্র এবং শিল্প পেশাদার।",
+          selection: "নির্বাচন:",
+          selection_text: "আগে আসলে আগে পাবেন ভিত্তিতে।",
+          seats: "আসন:",
+          timings: "সময়:",
+          timings_text: "সকাল ৯:০০ টা থেকে বিকাল ৫:৩০ টা",
+          fee: "ফি:",
+          fee_text: "নেই",
+          fee_free: "(বিনামূল্যে)",
+          certificate: "শংসাপত্র:",
+          certificate_text: ">৮০% উপস্থিতিসহ অংশগ্রহণকারীদের জন্য AICTE-VAANI ই-শংসাপত্র।",
+          register_now_cta: "এখন নিবন্ধন করুন!",
+          last_date_registration: "নিবন্ধনের শেষ তারিখ:",
+          registration_date: "২২ জুলাই ২০২৫",
+          register_atal: "ATAL পোর্টালে নিবন্ধন করুন",
+          organizing_committee: "আয়োজক কমিটি",
+          patrons: "পৃষ্ঠপোষক",
+          coordinators: "সমন্বয়কারী",
+          committee_members: "কমিটির সদস্যরা",
+          venue: "স্থান",
+          venue_address:
+            "কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ<br />আদামাস বিশ্ববিদ্যালয়<br />আদামাস নলেজ সিটি<br />বারাসাত - ব্যারাকপুর রোড<br />জগন্নাথপুর, কলকাতা<br />পশ্চিমবঙ্গ ৭০০১২৬",
+          contact_information: "যোগাযোগের তথ্য",
+          coordinator_contact: "অধ্যাপক (ডঃ) সজল সাহা | সমন্বয়কারী",
+          workshop_hours: "কর্মশালার সময়: সকাল ৯:০০ টা - বিকাল ৫:৩০ টা",
+          quick_links: "দ্রুত লিঙ্ক",
+          workshop_website: "কর্মশালার ওয়েবসাইট:",
+          registration_portal: "নিবন্ধন পোর্টাল:",
+          adamas_university: "আদামাস বিশ্ববিদ্যালয়",
+          download_brochure_footer: "ব্রোশিওর ডাউনলোড করুন",
+          footer_copy:
+            "&copy; ২০২৫ AICTE-VAANI কর্মশালা। কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ, আদামাস বিশ্ববিদ্যালয় দ্বারা আয়োজিত।<br />সর্বস্বত্ব সংরক্ষিত।",
+        },
+      };
+
+      function translatePage(language) {
+        document.querySelectorAll("[data-translate]").forEach((element) => {
+          const key = element.getAttribute("data-translate");
+          if (translations[language] && translations[language][key]) {
+            element.innerHTML = translations[language][key];
+          }
+        });
+      }
+
+      languageToggleButton.addEventListener("click", () => {
+        if (currentLanguage === "en") {
+          currentLanguage = "bn";
+          languageToggleButton.textContent = "English";
+        } else {
+          currentLanguage = "en";
+          languageToggleButton.textContent = "বাংলা";
+        }
+        translatePage(currentLanguage);
       });
     </script>
   </body>
