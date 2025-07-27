@@ -291,6 +291,29 @@
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       }
+      .cta-button-disabled {
+        background: #cccccc;
+        color: #666666;
+        padding: 16px 45px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: not-allowed;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: none;
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-button-disabled:hover {
+        background: #cccccc;
+        color: #666666;
+        transform: none;
+        box-shadow: none;
+      }
       #members-grid .card {
         width: 240px;
         height: 220px;
@@ -446,17 +469,16 @@
           <div
             class="flex flex-col md:flex-row justify-center items-center gap-4"
           >
-            <a
-              href="https://atalacademy.aicte-india.org/login"
-              target="_blank"
-              class="cta-button px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
+            <button
+              disabled
+              class="cta-button-disabled px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px] cursor-not-allowed opacity-50"
               style="height: 56px; width: 240px"
               data-translate="register_now"
             >
               Register Now
-            </a>
+            </button>
             <a
-              href="./VAANI_Schedule_updated_22-07-2025.pdf"
+              href="./Report on AICTE-1.docx"
               class="cta-button ml-0 md:ml-4 px-6 py-3 text-base flex items-center justify-center min-w-[240px] min-h-[56px]"
               style="height: 56px; width: 250px"
               download
@@ -475,7 +497,7 @@
                     d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"
                   />
                 </svg>
-                <span data-translate="download_schedule">Download Schedule</span>
+                <span data-translate="download_report">Download Report</span>
               </span>
             </a>
           </div>
@@ -1165,7 +1187,7 @@
             "Organised by Department of Computer Science and Engineering, Adamas University",
           register_now: "Register Now",
           download_brochure: "Download Brochure",
-          download_schedule: "Download Schedule",
+          download_report: "Download Report",
           about_event: "About the Event",
           about_workshop: "About the Workshop",
           workshop_description:
@@ -1240,7 +1262,7 @@
             "আদামাস বিশ্ববিদ্যালয়, কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ দ্বারা আয়োজিত",
           register_now: "এখন নিবন্ধন করুন",
           download_brochure: "ব্রোশিওর ডাউনলোড করুন",
-          download_schedule: "সূচি ডাউনলোড করুন",
+          download_report: "রিপোর্ট ডাউনলোড করুন",
           about_event: "ইভেন্ট সম্পর্কে",
           about_workshop: "কর্মশালা সম্পর্কে",
           workshop_description:
